@@ -1,0 +1,133 @@
+@import 'fonts';
+
+//FONTS
+$sans: 'Helvetica', sans-serif;
+$title: 'Helvetica', sans-serif;
+
+
+/* =Typographical Mixins/Functions
+-------------------------------------------------------------- */
+
+//SIZING
+$font-min : 16px;
+$font-min-int : 16;
+
+$font-max : 18px;
+$font-max-int : 18;
+
+$view-min : 600px;
+$view-min-int : 600;
+$view-max : 1500;
+
+html {
+  font-size: calc(#{$font-min} + (#{$font-max-int} - #{$font-min-int}) * ((100vw - #{$view-min}) / (#{$view-max} - #{$view-min-int})));
+}
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    float: none;
+    line-height: 1.25em;
+    margin: 0;
+}
+h1, .h1 {
+    font-size: 2.4em;
+    font-family: $title;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h2, .h2 {
+    font-size: 1.8em;
+    font-family: $title;
+    font-weight: 500;
+}
+h3, .h3 {
+    font-size: 1.4em;
+    font-family: $sans;
+    font-weight: 100;
+}
+h4, .h4 {
+    font-size: .7em;
+    font-family: $title;
+    text-transform: uppercase;
+}
+h5, .h5 {
+    font-size: .7em;
+    font-family: $sans;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h6, .h6 {
+    font-size: .9em;
+    font-family: $title;
+}
+p, i, strong {
+  font-size: .9em;
+  font-family: $sans;
+  line-height: 28px;
+}
+blockquote {
+    background-color: darken($base-body-color, 3%);
+    font-style: italic;
+    padding: 20px;
+}
+cite {
+    font-style: italic;
+}
+strong, b {
+    color: $primary-font-color;
+    font-family: $title;
+}
+a {
+  color: $primary-font-color;
+  text-decoration: none;
+  font-size: .7em;
+  font-family: $sans;
+  transition: all 400ms;
+  &:hover {
+  }
+}
+
+li {
+  list-style: none;
+  font-size: .9em;
+  margin-bottom: 10px;
+  font-family: $sans;
+}
+
+ul {
+  padding: 0;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: .9em;
+  font-family: $sans;
+  margin-bottom: 10px;
+}
+input, input::placeholder, textarea, textarea::placeholder {
+  font-size: .9em;
+  font-family: $sans;
+  margin-bottom: 20px;
+  // padding: 7px;
+  line-height: 28px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+textarea, input, button { outline: none; }
+
+textarea, input {
+  border: 1px solid $grey;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+textarea:focus, input:focus {
+  border: 1px solid $black;
+}

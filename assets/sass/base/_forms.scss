@@ -1,0 +1,153 @@
+// Base ninja forms styling
+form {
+  display: flex;
+  flex-direction: column;
+
+  input[type="button"] {
+    line-height: normal;
+  }
+
+
+  .field-wrap {
+    position: relative;
+  }
+
+  .active-label {
+    background-color: $brand;
+    color: $white;
+    font-size: .6rem;
+    padding: 5px !important;
+    z-index: 1;
+    display: block;
+  }
+
+  .textarea-wrap {
+
+    label {
+      top: 12px;
+      bottom: auto;
+    }
+  }
+}
+
+.list-radio-wrap div > label {
+  position: static;
+  color: $black;
+  font-weight: 500 !important;
+}
+
+.list-radio-wrap li:before {
+  content: none !important;
+}
+
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder {
+  font-size: 0.9em;
+  font-family: $sans;
+  margin-bottom: 20px;
+  padding: 7px;
+  line-height: 28px;
+  font-weight: 100;
+  color: $black;
+  background-color: $white;
+  appearance: none;
+  border-radius: 0;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+input,
+textarea {
+  border: 1px solid $grey;
+}
+
+textarea {
+  max-height: 150px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: $brand !important;
+}
+
+.nf-form-fields-required,
+.nf-form-title,
+.ninja-forms-req-symbol {
+  display: none;
+}
+
+.nf-error-msg {
+  font-family: $sans;
+  font-size: 0.8rem;
+}
+
+// RADIO BUTTONS
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    // left: -9999px;
+    border: 0;
+    appearance: none;
+    height: 20px;
+    margin: 0 !important;
+}
+
+.list-checkbox-wrap .nf-field-element li input, .list-radio-wrap .nf-field-element li input {
+  min-width: 100%;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: $grey-d;
+    margin-left: 0 !important;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $grey;
+    border-radius: 100%;
+    background: transparent;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: $brand;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
