@@ -69,18 +69,6 @@ if ( ! function_exists( 'cb_neat_scripts' ) ) :
 	 	wp_register_script('jquery', get_theme_file_uri("/assets/js/jquery-3.2.1.min.js"), false, null);
 	 	wp_enqueue_script('jquery');
 
-		// wp_register_script('instafeed', get_theme_file_uri("/assets/js/instafeed.min.js"), false, null);
-		// wp_enqueue_script('instafeed');
-
-		// wp_register_script('slick', get_theme_file_uri("/assets/js/slick.js"), false, null);
-		// wp_enqueue_script('slick');
-
-		// wp_register_script('scrollreveal', get_theme_file_uri("/assets/js/scrollreveal.min.js"), false, null);
-		// wp_enqueue_script('scrollreveal');
-
-
-
-
         /**
          * Concatenate Scripts. Checks the directory below for js files. If there are js files they will be concatenated and minified in either
          * development.js or production.js. NOTE - You will have to stop and restart gulp. Also, these scripts run on all pages. Make sure
