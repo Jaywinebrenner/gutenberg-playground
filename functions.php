@@ -37,6 +37,11 @@ if ( ! function_exists( 'cb_neat_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
+		* Enable menu support
+		*/
+		add_theme_support( 'menus' );
+
+		/*
 		* Add Editor Style for adequate styling in text editor.
 		*
 		* @link http://codex.wordpress.org/Function_Reference/add_editor_style
