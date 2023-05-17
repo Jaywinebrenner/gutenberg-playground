@@ -17,7 +17,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 
-<div class="hc-image-slider container">
+<div class="hc-image-slider container" data-slides="<?php the_field('slides_to_show'); ?>">
   <h3><?php the_field('title'); ?></h3>
   <div class="slides">
     <?php
