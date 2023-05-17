@@ -16,6 +16,10 @@ function init_acf_fields()
             'render_callback'   => 'block_renderer',
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
+            'align'           => 'full',
+            'supports'        => array(
+                'align' => array('full'),
+            ),
             'keywords'          => array('hero', 'masthead'),
         ));
 

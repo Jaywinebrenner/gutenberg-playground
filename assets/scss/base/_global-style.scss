@@ -69,4 +69,8 @@ body {
 
 .wp-block-columns {
   @extend .container;
+
+  &:before, &:after {
+    content: none;
+  }
 }

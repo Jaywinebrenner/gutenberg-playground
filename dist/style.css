@@ -409,6 +409,10 @@ body {
   background-size: 100% auto;
 }
 
+.wp-block-columns:before, .wp-block-columns:after {
+  content: none;
+}
+
 .wp-caption img {
   margin-bottom: 0;
 }
