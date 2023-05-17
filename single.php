@@ -9,7 +9,6 @@ get_header(); ?>
 
 <section class="post-single container">
 
-
 </section>
 
 

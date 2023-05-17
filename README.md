@@ -1,4 +1,4 @@
 
-# CB Default theme
+# Hello Cheshire
 
-### CB Wordpress default theme
+### HC Wordpress default theme

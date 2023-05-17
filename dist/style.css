@@ -1,0 +1,463 @@
+/*!
+Theme Name: WP TEMPLATE DEFAULT
+Theme URI: N/A
+Author: Tanner Eustice
+Author URI: https://github.com/teustice
+Description: Everything great starts somewhere, and this theme will surely give you a leg up.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: cb_neat
+Domain Path: /library/languages/
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+
+This theme, like WordPress, is licensed under the GPL.
+
+
+
+/*--------------------------------------------------------------
+Library
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Base
+--------------------------------------------------------------*/
+/* =Variables
+-------------------------------------------------------------- */
+/* =Typographical Mixins/Functions
+-------------------------------------------------------------- */
+html {
+  font-size: calc(16px + (18 - 16) * ((100vw - 600px) / (1500 - 600)));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  float: none;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: 2.4em;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h2, .h2 {
+  font-size: 1.8em;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-size: 1.4em;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+}
+
+h4, .h4 {
+  font-size: 0.7em;
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+
+h5, .h5 {
+  font-size: 0.7em;
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h6, .h6 {
+  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+}
+
+p, i, strong {
+  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+  line-height: 28px;
+}
+
+blockquote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  padding: 20px;
+}
+
+cite {
+  font-style: italic;
+}
+
+strong, b {
+  color: #2a2a2a;
+  font-family: "Helvetica", sans-serif;
+}
+
+a {
+  color: #2a2a2a;
+  text-decoration: none;
+  font-size: 0.7em;
+  font-family: "Helvetica", sans-serif;
+  transition: all 400ms;
+}
+li {
+  list-style: none;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-family: "Helvetica", sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 10px;
+}
+
+input, input::placeholder, textarea, textarea::placeholder {
+  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 20px;
+  line-height: 28px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+textarea, input, button {
+  outline: none;
+}
+
+textarea, input {
+  border: 1px solid #9a9a9a;
+  padding: 5px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+textarea:focus, input:focus {
+  border: 1px solid #2a2a2a;
+}
+
+.btn, .btn_1 {
+  text-transform: uppercase;
+  padding: 20px 30px;
+  letter-spacing: 1.4px;
+  transition: all 300ms;
+  font-size: 0.8rem;
+  line-height: 50px;
+}
+.btn_1 {
+  color: #FFFFFF;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+  font-weight: 100;
+}
+.btn_1:hover {
+  opacity: 0.8;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input[type=button] {
+  line-height: normal;
+}
+form .field-wrap {
+  position: relative;
+}
+form .active-label {
+  background-color: #2a2a2a;
+  color: #FFFFFF;
+  font-size: 0.6rem;
+  padding: 5px !important;
+  z-index: 1;
+  display: block;
+}
+form .textarea-wrap label {
+  top: 12px;
+  bottom: auto;
+}
+
+.list-radio-wrap div > label {
+  position: static;
+  color: #2a2a2a;
+  font-weight: 500 !important;
+}
+
+.list-radio-wrap li:before {
+  content: none !important;
+}
+
+input,
+input::placeholder,
+textarea,
+textarea::placeholder {
+  font-size: 0.9em;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 20px;
+  padding: 7px;
+  line-height: 28px;
+  font-weight: 100;
+  color: #2a2a2a;
+  background-color: #FFFFFF;
+  appearance: none;
+  border-radius: 0;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+input,
+textarea {
+  border: 1px solid #9a9a9a;
+}
+
+textarea {
+  max-height: 150px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2a2a2a !important;
+}
+
+.nf-form-fields-required,
+.nf-form-title,
+.ninja-forms-req-symbol {
+  display: none;
+}
+
+.nf-error-msg {
+  font-family: "Helvetica", sans-serif;
+  font-size: 0.8rem;
+}
+
+[type=radio]:checked,
+[type=radio]:not(:checked) {
+  position: absolute;
+  border: 0;
+  appearance: none;
+  height: 20px;
+  margin: 0 !important;
+}
+
+.list-checkbox-wrap .nf-field-element li input, .list-radio-wrap .nf-field-element li input {
+  min-width: 100%;
+}
+
+[type=radio]:checked + label,
+[type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #575757;
+  margin-left: 0 !important;
+}
+
+[type=radio]:checked + label:before,
+[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #9a9a9a;
+  border-radius: 100%;
+  background: transparent;
+}
+
+[type=radio]:checked + label:after,
+[type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #2a2a2a;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type=radio]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type=radio]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.section-pad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+html :where(.wp-block) {
+  margin: 0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.container, .wp-block-columns {
+  width: 90%;
+  max-width: 1500px;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .container, .wp-block-columns {
+    width: 100vw;
+    padding: 0 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+*:focus {
+  outline: none;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+.texture {
+  position: relative;
+}
+.texture:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100% auto;
+}
+
+.wp-caption img {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .wp-caption img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wp-caption {
+    max-width: 100%;
+  }
+}
+
+.aligncenter {
+  margin: auto;
+  display: block;
+}
+
+.alignleft {
+  float: left;
+  padding-right: 20px;
+}
+@media (max-width: 600px) {
+  .alignleft {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+.alignright {
+  float: right;
+  padding-left: 20px;
+}
+@media (max-width: 600px) {
+  .alignright {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+/*--------------------------------------------------------------
+Component
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Views
+--------------------------------------------------------------*/

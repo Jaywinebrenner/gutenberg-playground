@@ -1,0 +1,47 @@
+/*!
+Theme Name: WP TEMPLATE DEFAULT
+Theme URI: N/A
+Author: Tanner Eustice
+Author URI: https://github.com/teustice
+Description: Everything great starts somewhere, and this theme will surely give you a leg up.
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: cb_neat
+Domain Path: /library/languages/
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+
+This theme, like WordPress, is licensed under the GPL.
+
+
+
+/*--------------------------------------------------------------
+Library
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+Base
+--------------------------------------------------------------*/
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/btn';
+@import 'base/forms';
+@import 'base/media';
+@import 'base/layout';
+@import 'base/global-style';
+@import 'base/wp-styles';
+
+
+/*--------------------------------------------------------------
+Component
+--------------------------------------------------------------*/
+@import 'components/header';
+@import 'components/footer';
+@import 'components/modal';
+
+
+/*--------------------------------------------------------------
+Views
+--------------------------------------------------------------*/
+@import 'views/home';
