@@ -22,6 +22,29 @@ function init_acf_fields()
             'keywords'          => array('hero', 'masthead'),
         ));
 
+        // register hero block
+        acf_register_block(array(
+            'name'              => 'icon-row',
+            'title'             => __('Icon Row'),
+            'description'       => __('Lists some icons'),
+            'render_callback'   => 'block_renderer',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'align'           => 'full',
+            'supports'        => array(
+                'align' => array('full'),
+            ),
+            'keywords'          => array('icon', 'image'),
+            'enqueue_assets' => function () {
+                wp_enqueue_script(
+                    'icon-list-script',
+                    get_template_directory_uri() . '/assets/js/init-icon-list.js',
+                    ['wp-blocks', 'wp-element', 'wp-components', 'wp-i18n'],
+                    22
+                );
+            },
+        ));
+
         // register slider block
         acf_register_block(array(
             'name'              => 'slider',
