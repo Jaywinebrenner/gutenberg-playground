@@ -2,6 +2,8 @@ function initializeBlock($block, el) {
   if (!$block && !el) return;
   const element = $block ? $block[0].firstElementChild : el;
 
+  console.log("ICON LIST")
+
   const images = [...element.querySelectorAll('img')];
 
   images.forEach((el) => {
@@ -9,6 +11,7 @@ function initializeBlock($block, el) {
       el.style.display = 'none';
     })
   })
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {

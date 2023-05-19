@@ -23,6 +23,11 @@
 
 
 <div id="page" class="hfeed site">
+	<div class="nav">
+		<a href="/home" class="nav__item">HOME</a>
+		<a href="/about" class="nav__item">ABOUT</a>
+		<a href="/contact" class="nav__item">CONTACT</a>
+	</div>
 
 
 		<main id="main" class="site-main wrap" role="main">

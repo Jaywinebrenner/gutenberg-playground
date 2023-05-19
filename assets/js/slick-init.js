@@ -1,6 +1,8 @@
 
 (function ($) {
 
+  console.log("slick init")
+
   const initializeBlock = function ($block, el) {
     if(!$block && !el) return;
     const slider = $block ? $block[0].firstElementChild : el;

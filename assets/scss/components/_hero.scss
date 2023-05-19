@@ -3,4 +3,23 @@
   padding-top: 200px;
   padding-bottom: 200px;
   background-size: cover;
+  .container {
+    width: 50%;
+    margin: unset;
+    .content-wrapper {
+      padding-right: 50%;
+      background: rgb(252,252,252, .2);
+      margin: unset;
+      padding: 50px;
+    }
+    .eyebrow {
+      color: white;
+    }
+    .title {
+      color: white;
+    }
+    .content {
+      color: white;
+    }      
+  }
 }

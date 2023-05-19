@@ -462,17 +462,108 @@ body {
 /*--------------------------------------------------------------
 Component
 --------------------------------------------------------------*/
+.nav {
+  background-color: rgb(240, 246, 248);
+  padding: 12px 0 12px 32px;
+}
+.nav a {
+  font-size: 32px;
+  padding-right: 24px;
+  cursor: pointer;
+}
+.nav a:hover {
+  opacity: 0.5;
+}
+
 .hc-hero {
   padding: 32px;
   padding-top: 200px;
   padding-bottom: 200px;
   background-size: cover;
 }
+.hc-hero .container, .hc-hero .wp-block-columns {
+  width: 50%;
+  margin: unset;
+}
+.hc-hero .container .content-wrapper, .hc-hero .wp-block-columns .content-wrapper {
+  padding-right: 50%;
+  background: rgba(252, 252, 252, 0.2);
+  margin: unset;
+  padding: 50px;
+}
+.hc-hero .container .eyebrow, .hc-hero .wp-block-columns .eyebrow {
+  color: white;
+}
+.hc-hero .container .title, .hc-hero .wp-block-columns .title {
+  color: white;
+}
+.hc-hero .container .content, .hc-hero .wp-block-columns .content {
+  color: white;
+}
 
 .hc-icon-row .icons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 32px;
+}
+
+.parallax-column {
+  position: relative;
+}
+.parallax-column .title-wrapper {
+  background-color: lightgoldenrodyellow;
+  position: sticky;
+  top: 31px;
+  z-index: 10;
+  padding: 32px 32px;
+  text-align: center;
+}
+.parallax-column .parallax-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.parallax-column .parallax-column-wrapper__left {
+  background-color: rgb(240, 246, 248);
+  padding-left: 32px;
+}
+.parallax-column .parallax-column-wrapper__right {
+  background-color: coral;
+}
+.parallax-column .parallax-column-wrapper__right .image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.parallax-column .parallax-column-wrapper__right .image-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.accordion {
+  background-color: #eee;
+}
+.accordion .accordion-button {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.accordion .active, .accordion .accordion:hover {
+  background-color: #ccc;
+}
+.accordion .panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------

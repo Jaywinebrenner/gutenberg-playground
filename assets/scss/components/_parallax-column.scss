@@ -1,0 +1,41 @@
+
+
+.parallax-column {
+    position: relative;
+    .title-wrapper {
+        background-color: lightgoldenrodyellow;
+        position: sticky;
+        top: 31px;
+        z-index: 10;
+        padding: 32px 32px;
+        text-align: center;
+        h1 {
+        }
+
+    }
+    .parallax-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &__left {
+            background-color: rgb(240, 246, 248);
+            padding-left: 32px;
+
+        }
+        &__right {
+            background-color: coral;
+            .image-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+
+                }
+            }
+        }
+    }
+}

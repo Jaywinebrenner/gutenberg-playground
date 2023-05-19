@@ -12,8 +12,10 @@ $id = 'hero-' . $block['id'];
 
 <div id="<?php echo $id; ?>" class="hc-hero" style="background-image: url('<?php the_field('background'); ?>');">
   <div class="hc-hero__content container">
-    <h5><?php the_field('eyebrow'); ?></h5>
-    <h1><?php the_field('title'); ?></h1>
-    <p><?php the_field('content'); ?></p>
+    <div class="content-wrapper">
+      <h5 class="eyebrow"><?php the_field('eyebrow'); ?></h5>
+      <h1 class="title"><?php the_field('title'); ?></h1>
+      <p class="content"><?php the_field('content'); ?></p>
+    </div>
   </div>
 </div>

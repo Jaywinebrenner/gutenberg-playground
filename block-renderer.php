@@ -22,11 +22,11 @@ function init_acf_fields()
             'keywords'          => array('hero', 'masthead'),
         ));
 
-        // register hero block
+        // register parallax column
         acf_register_block(array(
-            'name'              => 'icon-row',
-            'title'             => __('Icon Row'),
-            'description'       => __('Lists some icons'),
+            'name'              => 'parallax-column',
+            'title'             => __('Parallax Column'),
+            'description'       => __('Right column is a gallery, left is parallax repeater'),
             'render_callback'   => 'block_renderer',
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
@@ -34,16 +34,55 @@ function init_acf_fields()
             'supports'        => array(
                 'align' => array('full'),
             ),
-            'keywords'          => array('icon', 'image'),
+            'keywords'          => array('parallax', 'column'),
             'enqueue_assets' => function () {
                 wp_enqueue_script(
-                    'icon-list-script',
-                    get_template_directory_uri() . '/assets/js/init-icon-list.js',
+                    'parallax-column-script',
+                    get_template_directory_uri() . '/assets/js/init-parallax-column.js',
                     ['wp-blocks', 'wp-element', 'wp-components', 'wp-i18n'],
                     22
                 );
             },
         ));
+
+
+                // register hero block
+                acf_register_block(array(
+                    'name'              => 'hero',
+                    'title'             => __('Hero'),
+                    'description'       => __('Custom Hero'),
+                    'render_callback'   => 'block_renderer',
+                    'category'          => 'formatting',
+                    'icon'              => 'admin-comments',
+                    'align'           => 'full',
+                    'supports'        => array(
+                        'align' => array('full'),
+                    ),
+                    'keywords'          => array('hero', 'masthead'),
+                ));
+        
+                // register accordion
+                acf_register_block(array(
+                    'name'              => 'accordion',
+                    'title'             => __('Accordion'),
+                    'description'       => __('Accordion'),
+                    'render_callback'   => 'block_renderer',
+                    'category'          => 'formatting',
+                    'icon'              => 'admin-comments',
+                    'align'           => 'full',
+                    'supports'        => array(
+                        'align' => array('full'),
+                    ),
+                    'keywords'          => array('accordion', 'column'),
+                    'enqueue_assets' => function () {
+                        wp_enqueue_script(
+                            'accordion-script',
+                            get_template_directory_uri() . '/assets/js/init-accordion.js',
+                            ['wp-blocks', 'wp-element', 'wp-components', 'wp-i18n'],
+                            22
+                        );
+                    },
+                ));
 
         // register slider block
         acf_register_block(array(

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// All code in this file will be injected globally\n\n\n//# sourceURL=webpack:///./assets/js/app.js?");
+eval("// All code in this file will be injected globally\n\nconsole.log(\"APP\")\nconst page = document.querySelector(\"#page\")\nconsole.log(\"page\",page)\nconst navItems = [...nav.querySelectorAll('nav_items')];\nconsole.log(\"navItems\",navItems);\n\nnavItems.forEach((el) => {\n    el.addEventListener('click', () => {\n      el.style.display = 'none';\n    })\n  })\n\n//# sourceURL=webpack:///./assets/js/app.js?");
 
 /***/ })
 

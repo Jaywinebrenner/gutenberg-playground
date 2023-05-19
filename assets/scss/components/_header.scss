@@ -1,0 +1,14 @@
+
+
+.nav {
+    background-color: rgb(240, 246, 248);
+    padding: 12px 0 12px 32px;
+    a {
+        font-size: 32px;
+        padding-right: 24px;
+        cursor: pointer;
+        &:hover {
+            opacity: .5;
+        }
+    }
+}
